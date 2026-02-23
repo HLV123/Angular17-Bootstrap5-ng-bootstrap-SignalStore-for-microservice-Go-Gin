@@ -1,0 +1,130 @@
+// Fonts loaded via index.html link tag
+
+:root {
+  --vn-green: #00C853;
+  --vn-red: #F44336;
+  --vn-gold: #FFD600;
+  --vn-purple: #AA00FF;
+  --vn-ref: #9E9E9E;
+  --ip-primary: #1B2A4A;
+  --ip-primary-light: #2D4A7A;
+  --ip-accent: #00B4D8;
+  --ip-accent-glow: rgba(0, 180, 216, 0.15);
+  --ip-surface: #FFFFFF;
+  --ip-surface-alt: #F5F7FA;
+  --ip-surface-dark: #0D1B2A;
+  --ip-border: #E2E8F0;
+  --ip-text: #1A202C;
+  --ip-text-muted: #718096;
+  --ip-sidebar-bg: #0F1923;
+  --ip-sidebar-text: #A0AEC0;
+  --ip-sidebar-active: #00B4D8;
+  --ip-card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --ip-card-shadow-hover: 0 10px 25px rgba(0,0,0,0.08);
+  --ip-radius: 12px;
+  --ip-radius-lg: 16px;
+  --ip-radius-sm: 8px;
+}
+
+* { font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, sans-serif; }
+code, .mono { font-family: 'JetBrains Mono', monospace; }
+
+body {
+  background: var(--ip-surface-alt);
+  color: var(--ip-text);
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #CBD5E0; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #A0AEC0; }
+
+.text-vn-green { color: var(--vn-green) !important; }
+.text-vn-red { color: var(--vn-red) !important; }
+.text-vn-gold { color: var(--vn-gold) !important; }
+.text-vn-purple { color: var(--vn-purple) !important; }
+.text-vn-ref { color: var(--vn-ref) !important; }
+.bg-vn-green { background-color: var(--vn-green) !important; }
+.bg-vn-red { background-color: var(--vn-red) !important; }
+
+.ip-card {
+  background: var(--ip-surface);
+  border: 1px solid var(--ip-border);
+  border-radius: var(--ip-radius);
+  box-shadow: var(--ip-card-shadow);
+  transition: box-shadow 0.2s ease;
+  &:hover { box-shadow: var(--ip-card-shadow-hover); }
+}
+
+.stat-value { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
+.stat-label { font-size: 0.75rem; font-weight: 500; color: var(--ip-text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+.stat-change { font-size: 0.8rem; font-weight: 600; }
+.positive { color: var(--vn-green); font-weight: 600; }
+.negative { color: var(--vn-red); font-weight: 600; }
+
+.ip-badge { font-size: 0.7rem; font-weight: 500; padding: 4px 10px; border-radius: 20px; display: inline-flex; align-items: center; gap: 4px; }
+
+.btn-ip-primary { background: var(--ip-primary); color: white; border: none; border-radius: var(--ip-radius-sm); font-weight: 500; &:hover { background: var(--ip-primary-light); color: white; } }
+.btn-ip-accent { background: var(--ip-accent); color: white; border: none; border-radius: var(--ip-radius-sm); font-weight: 500; &:hover { filter: brightness(0.9); color: white; } }
+.btn-ip-outline { background: transparent; color: var(--ip-text); border: 1px solid var(--ip-border); border-radius: var(--ip-radius-sm); font-weight: 500; &:hover { background: var(--ip-surface-alt); } }
+
+@keyframes priceUp { 0% { background-color: rgba(0,200,83,0.2); } 100% { background-color: transparent; } }
+@keyframes priceDown { 0% { background-color: rgba(244,67,54,0.2); } 100% { background-color: transparent; } }
+.blink-up { animation: priceUp 0.8s ease; }
+.blink-down { animation: priceDown 0.8s ease; }
+
+.ag-theme-quartz {
+  --ag-font-family: 'Be Vietnam Pro', sans-serif;
+  --ag-font-size: 13px;
+  --ag-header-font-weight: 600;
+  --ag-row-hover-color: #F0F7FF;
+  --ag-header-background-color: #F8FAFC;
+}
+
+.section-title { font-size: 1rem; font-weight: 600; display: flex; align-items: center; gap: 8px; i { color: var(--ip-accent); } }
+
+.ip-input {
+  border: 1px solid var(--ip-border); border-radius: var(--ip-radius-sm); padding: 8px 12px; font-size: 0.875rem;
+  &:focus { border-color: var(--ip-accent); box-shadow: 0 0 0 3px var(--ip-accent-glow); outline: none; }
+}
+
+.ip-table {
+  width: 100%; font-size: 0.85rem;
+  th { font-weight: 600; color: var(--ip-text-muted); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.05em; padding: 10px 12px; border-bottom: 2px solid var(--ip-border); }
+  td { padding: 10px 12px; border-bottom: 1px solid #F1F5F9; vertical-align: middle; }
+  tbody tr:hover { background: #F8FAFC; }
+}
+
+.ip-tabs {
+  display: flex; gap: 4px; background: var(--ip-surface-alt); border-radius: var(--ip-radius-sm); padding: 3px;
+  .ip-tab { padding: 6px 16px; border-radius: 6px; font-size: 0.8rem; font-weight: 500; cursor: pointer; color: var(--ip-text-muted); border: none; background: transparent;
+    &.active, &:hover { background: white; color: var(--ip-text); box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  }
+}
+
+.ws-indicator { display: inline-flex; align-items: center; gap: 6px; font-size: 0.7rem; font-weight: 500;
+  &::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--vn-green); animation: pulse 2s infinite; }
+}
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+.skeleton { background: linear-gradient(90deg, #F1F5F9 25%, #E2E8F0 50%, #F1F5F9 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 4px; }
+@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+.echart-box { width: 100%; min-height: 300px; }
+
+.main-wrapper { display: flex; min-height: 100vh; }
+.sidebar-wrapper { width: 260px; min-width: 260px; background: var(--ip-sidebar-bg); position: fixed; top: 0; left: 0; bottom: 0; z-index: 1000; overflow-y: auto; }
+.content-wrapper { flex: 1; margin-left: 260px; min-height: 100vh; display: flex; flex-direction: column; }
+.topbar-wrapper { background: var(--ip-surface); border-bottom: 1px solid var(--ip-border); position: sticky; top: 0; z-index: 900; }
+.page-content { flex: 1; padding: 24px; }
+
+@media (max-width: 991.98px) {
+  .sidebar-wrapper { transform: translateX(-100%); transition: transform 0.3s; &.show { transform: translateX(0); } }
+  .content-wrapper { margin-left: 0; }
+}
+
+.login-wrapper { min-height: 100vh; display: flex; background: linear-gradient(135deg, #0D1B2A 0%, #1B2A4A 50%, #0D1B2A 100%); }
+.login-card { background: rgba(255,255,255,0.97); border-radius: var(--ip-radius-lg); box-shadow: 0 25px 60px rgba(0,0,0,0.3); max-width: 440px; width: 100%; }
